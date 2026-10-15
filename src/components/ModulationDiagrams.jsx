@@ -1,53 +1,12 @@
 import React from 'react';
 import { M } from './diagramTheme';
-import { strokeCls, Arrow, Scroll } from './diagramParts';
+import { strokeCls, Arrow, Block, Glow, Carry, FlowingWave } from './diagramParts';
 
 // Looping animated block diagrams for Topics 6–8: stages light up in order and a dot carries the signal
 // along each arrow. The waveform slides use ModulationLab instead.
 
 const X0 = 105;
 const W = 480;
-
-// ---------- Animation helpers (SVG SMIL; SlideDiagram pauses them for reduced-motion users) ----------
-
-const CYCLE = 6;
-const kt = (...ts) => ts.map((t) => t.toFixed(3)).join(';');
-
-// Highlights a block during its stage: stage `step` of `steps` stages per cycle.
-function Glow({ x, y, w, h, rx = 6, step, steps }) {
-  const a = step / steps, b = (step + 0.5) / steps, c = (step + 1) / steps;
-  return (
-    <rect x={x - 3} y={y - 3} width={w + 6} height={h + 6} rx={rx + 2} fill={M.ask} fillOpacity="0.25" stroke={M.ask} strokeWidth="3" opacity="0">
-      <animate attributeName="opacity" values="0;0;1;0;0" keyTimes={kt(0, a, b, c, 1)} dur={`${CYCLE}s`} repeatCount="indefinite" />
-    </rect>
-  );
-}
-
-// A dot that runs along a polyline in the second half of stage `step`, carrying the signal to the next block.
-function Carry({ points, step, steps, color = M.ask }) {
-  const a = (step + 0.5) / steps, b = (step + 1) / steps;
-  const loop = { dur: `${CYCLE}s`, repeatCount: 'indefinite' };
-  return (
-    <circle r="5" fill={color} className={strokeCls} strokeWidth="1.5" opacity="0">
-      <animateMotion path={points.map((p, i) => `${i ? 'L' : 'M'} ${p[0]},${p[1]}`).join(' ')} keyPoints="0;0;1;1" keyTimes={kt(0, a, b, 1)} calcMode="linear" {...loop} />
-      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes={kt(0, a - 0.001, a, b, Math.min(b + 0.001, 1), 1)} {...loop} />
-    </circle>
-  );
-}
-
-// A periodic wave (period in px) flowing rightwards inside a fixed window.
-function FlowingWave({ id, fn, yMid, scale, x0, w, period, speed = 40, color, width = 2 }) {
-  let d = '';
-  for (let i = 0; i <= 400; i++) {
-    const x = x0 - period + (i / 400) * (w + period);
-    d += `${i ? ' L' : 'M'} ${x.toFixed(1)},${(yMid - scale * fn((x - x0) / w)).toFixed(1)}`;
-  }
-  return (
-    <Scroll id={id} x={x0} y={yMid - scale - 4} w={w} h={2 * scale + 8} shift={period} dur={`${(period / speed).toFixed(2)}s`}>
-      <path d={d} fill="none" stroke={color} strokeWidth={width} />
-    </Scroll>
-  );
-}
 
 function LaneLabel({ y, label, sub }) {
   return (
@@ -63,19 +22,6 @@ function Baseline({ y }) {
 }
 
 // ---------- Digital data → analog signal (Topic 6) ----------
-
-function Block({ x, y, w, h, lines, fill = M.block }) {
-  return (
-    <g>
-      <rect x={x} y={y} width={w} height={h} rx="6" fill={fill} fillOpacity="0.3" className={strokeCls} strokeWidth="2" />
-      {lines.map((ln, i) => (
-        <text key={i} x={x + w / 2} y={y + h / 2 + 4 + (i - (lines.length - 1) / 2) * 14} fontSize="12" textAnchor="middle" fontWeight={i === 0 ? 900 : 700}>
-          {ln}
-        </text>
-      ))}
-    </g>
-  );
-}
 
 function Link({ x1, y1, x2, y2, id }) {
   return <line x1={x1} y1={y1} x2={x2} y2={y2} stroke={M.arrow} strokeWidth="2.5" markerEnd={`url(#${id})`} />;

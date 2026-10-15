@@ -49,6 +49,7 @@ export const TOPICS = [
         subtitle: "Signal Conversion & Step-by-Step Flow",
         accent: "bg-[#fef08a]",
         summary: "Wireless communication works by converting information into signals and transmitting them through the air.",
+        diagram: "wirelessflow",
         steps: [
           { step: "1", title: "Transmitter", desc: "Converts information into electrical signals." },
           { step: "2", title: "Transmitting antenna", desc: "Sends electromagnetic waves through the air." },
@@ -147,6 +148,7 @@ export const TOPICS = [
         subtitle: "Definition & Examples",
         accent: "bg-[#bae6fd]",
         definition: "An antenna is a device that converts electrical signals into electromagnetic waves for transmission and electromagnetic waves into electrical signals during reception.",
+        diagram: "antennaconvert",
         examples: ["Mobile Phones", "Wi-Fi Routers", "Satellite Dishes"],
         badge: "Antenna"
       },
@@ -174,6 +176,7 @@ export const TOPICS = [
         subtitle: "Strength of Radiation vs Direction",
         accent: "bg-[#fed7aa]",
         definition: "A radiation pattern is a graphical representation of the strength of radiation in different directions around an antenna.",
+        diagram: "patterns",
         typesLabel: "Types of Radiation Pattern",
         types: [
           { name: "Omnidirectional", desc: "Provides broad coverage around the antenna in a particular plane." },
@@ -243,6 +246,7 @@ export const TOPICS = [
         subtitle: "Orientation of the Electric Field",
         accent: "bg-[#fef08a]",
         definition: "Polarization describes the orientation and movement of the electric field of an electromagnetic wave.",
+        diagram: "polarization",
         typesLabel: "Types of Polarization",
         types: [
           { name: "Linear", desc: "The electric field oscillates along a straight line (vertical or horizontal).", example: "FM/AM radio, mobile towers (vertical)" },
@@ -273,6 +277,7 @@ export const TOPICS = [
         subtitle: "Angular Width of the Main Lobe",
         accent: "bg-[#bbf7d0]",
         definition: "Beamwidth is the angular width of an antenna's main radiation lobe.",
+        diagram: "beamwidth",
         typesLabel: "Narrow vs Wide Beamwidth",
         types: [
           { name: "Narrow Beamwidth", desc: "Concentrates radiation in a smaller angular region." },

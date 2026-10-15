@@ -1,5 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { C, F, M } from './diagramTheme';
+import { useStillFrame } from './diagramParts';
+import * as Antenna from './AntennaDiagrams';
 import * as Propagation from './PropagationDiagrams';
 import * as Fading from './FadingDiagrams';
 import * as Modulation from './ModulationDiagrams';
@@ -8,6 +10,34 @@ import * as Modulation from './ModulationDiagrams';
 // Some diagrams loop (SVG SMIL); `still` is the moment (seconds) to freeze them at for reduced-motion users.
 
 const DIAGRAMS = {
+  // Topic 1: Wireless communication technology
+  wirelessflow: {
+    svg: Antenna.WirelessFlow,
+    legend: [
+      { color: M.ask, label: 'Active step' },
+      { color: F.signal, label: 'Electromagnetic waves through the channel' }
+    ]
+  },
+  // Topic 2: Antennas
+  antennaconvert: {
+    svg: Antenna.AntennaConvert,
+    legend: [
+      { color: C.ground, label: 'Electrical signal on the wire' },
+      { color: F.signal, label: 'Electromagnetic waves in free space' }
+    ]
+  },
+  patterns: {
+    svg: Antenna.RadiationPatterns,
+    legend: [{ color: F.signal, dashed: true, label: 'Radiation pattern: waves reach farther where the pattern is larger' }]
+  },
+  polarization: {
+    svg: Antenna.Polarization,
+    legend: [{ color: F.signal, label: 'Electric field (E) vector at one point, changing over time' }]
+  },
+  beamwidth: {
+    svg: Antenna.Beamwidth,
+    legend: [{ color: '#475569', dashed: true, label: 'Half-power (−3 dB) edges of the main lobe' }]
+  },
   // Topic 3: Propagation Modes
   ground: {
     svg: Propagation.GroundWave,
@@ -114,13 +144,7 @@ const DIAGRAMS = {
 export default function SlideDiagram({ name }) {
   const diagram = DIAGRAMS[name];
   const ref = useRef(null);
-  useEffect(() => {
-    if (!diagram || !window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
-    ref.current?.querySelectorAll('svg').forEach((svg) => {
-      svg.pauseAnimations?.();
-      svg.setCurrentTime?.(diagram.still ?? 5);
-    });
-  }, [diagram]);
+  useStillFrame(ref, diagram?.still);
   if (!diagram) return null;
   const Svg = diagram.svg;
   return (

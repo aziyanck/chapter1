@@ -1,6 +1,6 @@
 import React from 'react';
 import { C, F } from './diagramTheme';
-import { strokeCls, Tower, Arrow, Scroll } from './diagramParts';
+import { strokeCls, Tower, Arrow, Scroll, Pulse, Ripples } from './diagramParts';
 
 // Looping animated diagrams for Topic 4: Fading in the Mobile Environment.
 // Animations use SVG SMIL so they run without JS; SlideDiagram pauses them for reduced-motion users.
@@ -96,22 +96,6 @@ function lowestPoint(fn, from, to, x0, y0, w, h) {
 }
 
 // ---------- Animation helpers ----------
-
-const polyD = (pts) => pts.map((p, i) => `${i ? 'L' : 'M'} ${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
-const polyLen = (pts) => pts.slice(1).reduce((sum, p, i) => sum + Math.hypot(p.x - pts[i].x, p.y - pts[i].y), 0);
-
-// A dot that travels a polyline at a fixed speed once per cycle, then vanishes until the next cycle.
-// With a shared cycle and speed, longer paths visibly arrive later.
-function Pulse({ points, color, cycle, speed = 160, begin = '0s', r = 5 }) {
-  const f = Math.min(0.95, polyLen(points) / speed / cycle).toFixed(3);
-  const loop = { dur: `${cycle}s`, begin, repeatCount: 'indefinite' };
-  return (
-    <circle r={r} fill={color} className={strokeCls} strokeWidth="1.5" opacity="0">
-      <animateMotion path={polyD(points)} keyPoints="0;1;1" keyTimes={`0;${f};1`} calcMode="linear" {...loop} />
-      <animate attributeName="opacity" values="1;1;0;0" keyTimes={`0;${f};${Math.min(+f + 0.03, 0.99).toFixed(3)};1`} {...loop} />
-    </circle>
-  );
-}
 
 // Wipes children in from left to right between fractions `start` and `end` of each cycle.
 function Reveal({ id, x, y, w, h, dur, start, end, children }) {
@@ -280,14 +264,7 @@ export function PathLossScene() {
       <Ground y={g} />
       <Tower x={60} base={g} h={110} color="#facc15" label="Cell tower" />
       {/* wavefronts expand from the tower and fade as they spread */}
-      <g transform="translate(60 100)">
-        {[0, 1, 2].map((i) => (
-          <path key={i} d="M 119,-119 A 170 170 0 0 1 119,119" fill="none" stroke={F.signal} strokeWidth="3" vectorEffect="non-scaling-stroke" opacity="0">
-            <animateTransform attributeName="transform" type="scale" values="0.25;1" dur="3s" begin={`${-i}s`} repeatCount="indefinite" />
-            <animate attributeName="opacity" values="1;0" dur="3s" begin={`${-i}s`} repeatCount="indefinite" />
-          </path>
-        ))}
-      </g>
+      <Ripples cx={60} cy={100} d="M 119,-119 A 170 170 0 0 1 119,119" color={F.signal} from={0.25} />
       {phones.map((p) => (
         <g key={p.x}>
           <Phone x={p.x} y={g - 20} label={p.label} />

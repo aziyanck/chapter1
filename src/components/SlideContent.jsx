@@ -65,6 +65,8 @@ export default function SlideContent({ topic, slide }) {
             💡 {slide.summary}
           </div>
 
+          {slide.diagram && <SlideDiagram name={slide.diagram} />}
+
           <div className="space-y-3">
             <h4 className="text-xs font-black uppercase text-black dark:text-slate-200 tracking-wider">
               5-Step Signal Transmission Flow:

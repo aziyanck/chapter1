@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Radio, Layers, Wifi, Activity, Zap, RefreshCw } from 'lucide-react';
+import { Ripples, useStillFrame } from './diagramParts';
+import { WirelessFlow } from './AntennaDiagrams';
+import { polar, arc, omniPattern, directionalPattern } from './diagramTheme';
 
 export default function TopicVisuals({ topicNumber }) {
   // Common states for interactive tabs inside diagrams
@@ -10,12 +13,14 @@ export default function TopicVisuals({ topicNumber }) {
   const [modScheme, setModScheme] = useState('ask');
   const [analogModType, setAnalogModType] = useState('am');
   const [pcmStep, setPcmStep] = useState('all');
+  const animRef = useRef(null);
+  useStillFrame(animRef);
 
   switch (topicNumber) {
     case 1:
       // Topic 1: Wireless Comm Technology Architecture (aligned with topic1.md)
       return (
-        <div className="bg-white dark:bg-[#141827] rounded-xl p-6 neo-border-thick dark:border-slate-700 neo-shadow text-black dark:text-slate-100 transition-colors">
+        <div ref={animRef} className="bg-white dark:bg-[#141827] rounded-xl p-6 neo-border-thick dark:border-slate-700 neo-shadow text-black dark:text-slate-100 transition-colors">
           <div className="flex items-center justify-between mb-4 pb-2 border-b-2 border-black dark:border-slate-700">
             <h4 className="text-xs sm:text-sm font-black uppercase tracking-wider text-black dark:text-white flex items-center gap-2">
               <Radio className="w-4 h-4 text-black dark:text-white stroke-[2.5]" />
@@ -26,6 +31,10 @@ export default function TopicVisuals({ topicNumber }) {
             </span>
           </div>
 
+          <div className="p-4 bg-[#faf8f5] dark:bg-[#07090e] neo-border dark:border-slate-700 rounded-xl">
+            <WirelessFlow />
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 my-4">
             {[
               { num: "1", label: "Transmitter", sub: "Converts info to signals", bg: "bg-[#dbeafe] dark:bg-[#1e3a8a] text-black dark:text-white" },
@@ -34,7 +43,7 @@ export default function TopicVisuals({ topicNumber }) {
               { num: "4", label: "Rx Antenna", sub: "Receives transmitted waves", bg: "bg-[#e9d5ff] dark:bg-[#581c87] text-black dark:text-white" },
               { num: "5", label: "Receiver", sub: "Converts back to information", bg: "bg-[#bbf7d0] dark:bg-[#14532d] text-black dark:text-white" }
             ].map((blk, idx) => (
-              <div key={idx} className={`p-4 rounded-xl neo-border dark:border-slate-700 ${blk.bg} flex flex-col justify-center text-center shadow-[3px_3px_0px_0px_#000] relative`}>
+              <div key={idx} style={{ animationDelay: `${idx * 1.2}s` }} className={`flow-step p-4 rounded-xl neo-border dark:border-slate-700 ${blk.bg} flex flex-col justify-center text-center shadow-[3px_3px_0px_0px_#000] relative`}>
                 <span className="w-6 h-6 rounded bg-white dark:bg-[#0c0f1a] text-black dark:text-white neo-border dark:border-slate-700 font-black text-xs mx-auto mb-1 flex items-center justify-center">
                   {blk.num}
                 </span>
@@ -109,7 +118,7 @@ export default function TopicVisuals({ topicNumber }) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             {/* SVG Visualizer */}
-            <div className="bg-[#faf8f5] dark:bg-[#07090e] rounded-xl p-4 neo-border dark:border-slate-700 flex flex-col items-center justify-center relative min-h-[220px]">
+            <div ref={animRef} className="bg-[#faf8f5] dark:bg-[#07090e] rounded-xl p-4 neo-border dark:border-slate-700 flex flex-col items-center justify-center relative min-h-[220px]">
               <svg viewBox="0 0 320 200" className="w-full h-48">
                 {antennaType === 'dipole' && (
                   <g>
@@ -120,6 +129,7 @@ export default function TopicVisuals({ topicNumber }) {
                     {/* Donut radiation pattern lobes */}
                     <ellipse cx="110" cy="100" rx="46" ry="34" fill="#bae6fd" stroke="#000000" strokeWidth="2.5" opacity="0.8" />
                     <ellipse cx="210" cy="100" rx="46" ry="34" fill="#bae6fd" stroke="#000000" strokeWidth="2.5" opacity="0.8" />
+                    <Ripples cx={160} cy={100} d={omniPattern(96)} color="#0284c7" dur={2.4} width={2} />
                     <text x="160" y="25" fill="#000000" fontSize="11" textAnchor="middle" fontWeight="bold">Omnidirectional in H-plane (Donut 3D)</text>
                     <text x="110" y="105" fill="#000000" fontSize="11" textAnchor="middle" fontWeight="black" className="keep-dark">Lobe 1</text>
                     <text x="210" y="105" fill="#000000" fontSize="11" textAnchor="middle" fontWeight="black" className="keep-dark">Lobe 2</text>
@@ -137,6 +147,7 @@ export default function TopicVisuals({ topicNumber }) {
                     <ellipse cx="100" cy="135" rx="18" ry="12" fill="#fed7aa" stroke="#000000" strokeWidth="2" />
                     {/* Back lobe */}
                     <ellipse cx="25" cy="100" rx="12" ry="8" fill="#fecaca" stroke="#000000" strokeWidth="2" />
+                    <Ripples cx={70} cy={100} d={directionalPattern(8, 230)} color="#c026d3" dur={2.4} width={2} />
                     <text x="200" y="104" fill="#000000" fontSize="12" fontWeight="black" className="keep-dark">Main Lobe (HPBW ≈ 25°)</text>
                     <text x="145" y="60" fill="#000000" fontSize="10" fontWeight="bold" className="keep-dark">Side Lobe</text>
                     <text x="160" y="185" fill="#000000" fontSize="11" textAnchor="middle" fontWeight="bold">Narrow Beamwidth • High Gain (15–35 dBi)</text>
@@ -150,6 +161,7 @@ export default function TopicVisuals({ topicNumber }) {
                     <polygon points="110,115 210,115 230,105 130,105" fill="#f59e0b" stroke="#000000" strokeWidth="2" />
                     {/* Broadside radiation lobe */}
                     <path d="M 170,105 C 130,30 210,30 170,105" fill="#fed7aa" stroke="#000000" strokeWidth="2.5" />
+                    <Ripples cx={170} cy={105} d={polar((a) => (Math.sin(a) > 0 ? 70 * Math.sin(a) ** 3 : 0))} color="#f59e0b" dur={2.4} width={2} />
                     <text x="170" y="25" fill="#000000" fontSize="11" textAnchor="middle" fontWeight="black">Broadside Hemispherical Pattern</text>
                     <text x="170" y="165" fill="#000000" fontSize="11" textAnchor="middle" fontWeight="bold">Planar & Compact for Smartphones & Laptops</text>
                   </g>
@@ -171,6 +183,7 @@ export default function TopicVisuals({ topicNumber }) {
                     <text x="215" y="60" fill="#000000" fontSize="10" textAnchor="middle" fontWeight="black">Directors</text>
                     <path d="M 270,100 L 295,100" stroke="#000000" strokeWidth="3" />
                     <polygon points="295,95 305,100 295,105" fill="#000000" />
+                    <Ripples cx={120} cy={100} d={arc(190, 14)} color="#0284c7" count={4} dur={2.4} width={2} />
                     <text x="160" y="180" fill="#000000" fontSize="11" textAnchor="middle" fontWeight="bold">Direction of Radiation (Forward Gain: 8–18 dBi)</text>
                   </g>
                 )}

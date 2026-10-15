@@ -101,6 +101,27 @@ body.dark .intro-bg {
   animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Topic 1 flow cards light up one after another (6s cycle, staggered per card) */
+@keyframes flowStep {
+  0%, 22%, 100% {
+    transform: none;
+  }
+  6%, 16% {
+    transform: translate(-2px, -4px);
+    box-shadow: 5px 7px 0px 0px #000000;
+  }
+}
+
+.flow-step {
+  animation: flowStep 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-step {
+    animation: none;
+  }
+}
+
 /* Custom Neo-Brutalist scrollbars */
 ::-webkit-scrollbar {
   width: 10px;
