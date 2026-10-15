@@ -1,0 +1,23 @@
+======================================================================
+TOPIC 5: SIGNAL ENCODING TECHNIQUES
+======================================================================
+Definition of Signal Encoding & the Four Encoding Techniques
+
+Key Concepts:
+  - Signal encoding: Converting data into a signal suitable for transmission over a medium
+  - Digital data → Digital signal
+  - Digital data → Analog signal
+  - Analog data → Digital signal
+  - Analog data → Analog signal
+
+--- 1. Signal Encoding Techniques  (Definition & the Four Techniques) ---
+Definition: Signal encoding is the process of converting data (digital or analog) into a signal (digital or analog) that is suitable for transmission over a communication medium.
+The Four Encoding Techniques:
+  - Digital Data → Digital Signal — Example: A computer sending data to another computer over an Ethernet (LAN) cable.
+  - Digital Data → Analog Signal — Example: A Wi-Fi router or dial-up modem sending digital data as radio or telephone-line waves.
+  - Analog Data → Digital Signal — Example: Your voice on a mobile call being digitized, or a song recorded as an MP3 file.
+  - Analog Data → Analog Signal — Example: AM and FM radio broadcasting a presenter's voice.
+
+Exam Tips:
+  - Define signal encoding.
+  - List the four signal encoding techniques with a one-line definition of each.

@@ -1,0 +1,674 @@
+Wireless Communication Networks — Unit 1: Introduction
+Presenters: Muhammed Rayees, Abdulla Aziyan C K
+Comprehensive lecture and interactive study portal covering the foundations of wireless transmission, antenna fundamentals, radio wave propagation modes, multipath fading mechanisms, and analog/digital signal encoding conversions.
+
+======================================================================
+TOPIC 1: WIRELESS COMMUNICATION TECHNOLOGY
+======================================================================
+Principles, Components, Types of Wireless Comm, Networks & Applications
+
+Key Concepts:
+  - Definition: Transmitting data without physical cables using electromagnetic waves
+  - Basic Principle: Converting info into signals & sending through air via Tx, Channel, and Rx
+  - 4 Core Components: Transmitter, Antenna, Channel, and Receiver
+  - 7 Types: Radio, Microwave, Satellite, Infrared, Cellular, Wi-Fi, and Bluetooth
+  - 4 Network Categories: WPAN, WLAN, WMAN, and WWAN
+  - Real-world Applications: Cellular, Wi-Fi, GPS, Satellite, IoT Smart-home & Emergency
+
+--- 1. Definition of Wireless Communication  (Foundation & Core Concept) ---
+Key Points:
+  - Wireless communication is the process of transmitting information between two or more devices without using physical cables.
+  - It uses electromagnetic waves, such as radio waves, to transfer data across free space.
+  - Enables flexible, untethered mobility for voice, data, video, and control signals.
+Examples:
+  - Wi-Fi
+  - Bluetooth
+  - Mobile Networks (4G/5G)
+  - Satellite Communication
+
+--- 2. Basic Principle of Wireless Communication  (Signal Conversion & Step-by-Step Flow) ---
+Summary: Wireless communication works by converting information into signals and transmitting them through the air.
+Steps:
+  1. Transmitter — Converts information into electrical signals.
+  2. Transmitting antenna — Sends electromagnetic waves through the air.
+  3. Wireless channel — Carries the signals through unguided space to the destination.
+  4. Receiving antenna — Captures and intercepts the transmitted waves.
+  5. Receiver — Converts the received signals back into original information.
+
+--- 3. Components of a Wireless Communication System  (The 4 Essential Hardware & Media Building Blocks) ---
+Components:
+  - Transmitter — Sends the information by processing, encoding, and modulating the source data into RF energy.
+  - Antenna — Transducer that transmits and receives electromagnetic waves into or from free space.
+  - Channel — The physical medium (air / atmosphere / vacuum) through which the electromagnetic signals travel.
+  - Receiver — Receives, amplifies, demodulates, and processes the signals back to recognizable output.
+
+--- 4. Types of Wireless Communication  (7 Major Wireless Transmission Technologies) ---
+Types:
+  - Radio Communication — Uses radio waves to transmit information.; Example: FM radio broadcasting
+  - Microwave Communication — Uses high-frequency electromagnetic waves for line-of-sight links.; Example: Point-to-point telecom links
+  - Satellite Communication — Uses orbiting satellites to relay signals over vast planetary distances.; Example: Satellite television (DTH)
+  - Infrared Communication — Uses infrared light spectrum for direct short-distance transmission.; Example: TV remote controls
+  - Cellular Communication — Uses a network of geographical cells and base stations for wide mobility.; Example: 4G LTE and 5G NR
+  - Wi-Fi — Provides high-speed wireless local network access to devices.; Example: Connecting a laptop to a home router
+  - Bluetooth — Enables low-power, short-range wireless data exchange between devices.; Example: Wireless headphones & smartwatches
+
+--- 5. Types of Wireless Networks  (Geographical Coverage & Classification) ---
+Networks:
+  - WPAN (Wireless Personal Area Network) — Code: WPAN; Scope: Very short distance (a few meters); Example: Bluetooth, Zigbee (smart peripherals)
+  - WLAN (Wireless Local Area Network) — Code: WLAN; Scope: Limited area (home, office, campus); Example: Wi-Fi (IEEE 802.11 standards)
+  - WMAN (Wireless Metropolitan Area Network) — Code: WMAN; Scope: City or metropolitan scale; Example: WiMAX, city-wide municipal wireless
+  - WWAN (Wireless Wide Area Network) — Code: WWAN; Scope: Large nationwide / global geographical areas; Example: Cellular networks (4G/5G), Satellite links
+
+--- 6. Applications of Wireless Communication  (Everyday, Industrial, and Critical Domains) ---
+Applications:
+  - Mobile Phones & Cellular Networks — Global mobile voice, messaging, and high-speed packet data on the go.
+  - Wi-Fi & Internet Access — Broadband connectivity in homes, offices, coffee shops, and universities.
+  - Bluetooth Peripherals — Connecting wireless audio, keyboards, mice, wearables, and healthcare sensors.
+  - Satellite Communication — Intercontinental broadcasting, maritime vessels, aviation, and remote internet.
+  - GPS Navigation — Global positioning satellites providing real-time location and turn-by-turn routing.
+  - Wireless Sensors & Smart Home — IoT climate sensors, security cameras, smart lighting, and automated locks.
+  - Emergency & Military Communication — Disaster recovery, police/fire radio dispatch, and encrypted tactical field links.
+
+======================================================================
+TOPIC 2: ANTENNAS
+======================================================================
+Antenna Basics, Types, Radiation Pattern, Gain, Directivity, Efficiency, Polarization, Beamwidth, Bandwidth & Aperture
+
+Key Concepts:
+  - Antenna: Converts electrical signals into EM waves (transmission) and EM waves into electrical signals (reception)
+  - 7 Types: Dipole, Monopole, Loop, Yagi-Uda, Parabolic Reflector, Horn, and Microstrip (Patch)
+  - Radiation Pattern: Omnidirectional, Directional, and Isotropic
+  - Parameters: Gain, Directivity, Efficiency, Beamwidth, Bandwidth, and Effective Aperture
+  - Polarization: Linear, Circular, and Elliptical orientation of the electric field
+
+--- 1. Antenna  (Definition & Examples) ---
+Definition: An antenna is a device that converts electrical signals into electromagnetic waves for transmission and electromagnetic waves into electrical signals during reception.
+Examples:
+  - Mobile Phones
+  - Wi-Fi Routers
+  - Satellite Dishes
+
+--- 2. Types of Antennas  (7 Common Antenna Structures) ---
+Items:
+  - Dipole Antenna — Consists of two conductive elements.; Example: Radio communication
+  - Monopole Antenna — Consists of a single radiating element.; Example: Mobile and vehicle communication
+  - Loop Antenna — Consists of a conductor arranged in a closed loop.; Example: Radio receivers and RFID systems
+  - Yagi-Uda Antenna — A directional antenna with a driven element, reflector and directors.; Example: Television reception
+  - Parabolic Reflector Antenna — Uses a dish-shaped reflector to concentrate signals in a particular direction.; Example: Satellite communication
+  - Horn Antenna — Uses a flared structure to transmit or receive electromagnetic waves.; Example: Radar and microwave communication
+  - Microstrip (Patch) Antenna — A compact, flat antenna.; Example: Mobile phones, GPS devices and wireless systems
+
+--- 3. Radiation Pattern  (Strength of Radiation vs Direction) ---
+Definition: A radiation pattern is a graphical representation of the strength of radiation in different directions around an antenna.
+Types of Radiation Pattern:
+  - Omnidirectional — Provides broad coverage around the antenna in a particular plane.
+  - Directional — Concentrates radiation in a specific direction.
+  - Isotropic — Radiates equally in all directions.
+
+--- 4. Antenna Gain  (Directing Energy Compared to a Reference) ---
+Definition: Antenna gain indicates how effectively an antenna directs energy in a particular direction compared with a reference antenna.
+Key Points:
+  - High gain generally means more concentrated radiation.
+  - Gain is commonly measured in dBi or dBd.
+  - High-gain antennas are useful for long-distance communication.
+  - Zero gain (0 dBi) means the antenna radiates the same as an isotropic antenna, with no concentration of energy in any direction.
+
+--- 5. Directivity  (Concentration of Radiation vs an Isotropic Radiator) ---
+Definition: Directivity measures how strongly an antenna concentrates its radiation in a particular direction compared with an isotropic radiator.
+Key Points:
+  - High directivity means radiation is more concentrated in a particular direction.
+  - It does not account for antenna losses.
+  - Gain = Efficiency × Directivity (G = η · D), so gain includes losses but directivity does not.
+Formula:
+  D = 4π · U_max / P_rad
+  where: U_max = maximum radiation intensity; P_rad = total radiated power
+
+--- 6. Antenna Efficiency  (Radiated Power vs Input Power) ---
+Definition: Antenna efficiency is the ratio of the power radiated by an antenna to the power supplied to it.
+Formula:
+  η = (P_rad / P_in) × 100%
+  where: P_rad = power radiated by the antenna; P_in = input power supplied to the antenna
+Example: If an antenna receives 100 W of input power and radiates 80 W, its radiation efficiency is 80%.
+
+--- 7. Antenna Polarization  (Orientation of the Electric Field) ---
+Definition: Polarization describes the orientation and movement of the electric field of an electromagnetic wave.
+Types of Polarization:
+  - Linear — The electric field oscillates along a straight line (vertical or horizontal).; Example: FM/AM radio, mobile towers (vertical)
+  - Circular — The electric field rotates in a circular path with constant strength (RHCP or LHCP).; Example: GPS, satellite TV, RFID
+  - Elliptical — The electric field traces an elliptical path. Linear and circular are special cases of elliptical.; Example: Most practical antennas
+Why Polarization Matters:
+  - The antenna's shape and orientation decide the polarization: a vertical rod sends vertically polarized waves.
+  - The receiving antenna must match the transmitter's polarization, otherwise signal is lost (polarization mismatch loss).
+Polarization Mismatch:
+| Transmitter | Receiver           | Result                      |
+|-------------|--------------------|-----------------------------|
+| Vertical    | Vertical           | Full signal                 |
+| Vertical    | Tilted 45°         | Half the power lost         |
+| Vertical    | Horizontal         | Almost no signal            |
+| Circular    | Linear (any angle) | Half the power lost         |
+
+--- 8. Beamwidth  (Angular Width of the Main Lobe) ---
+Definition: Beamwidth is the angular width of an antenna's main radiation lobe.
+Narrow vs Wide Beamwidth:
+  - Narrow Beamwidth — Concentrates radiation in a smaller angular region.
+  - Wide Beamwidth — Covers a larger angular region.
+Example: Satellite dishes generally have narrow beamwidths, while Wi-Fi router antennas have wide beamwidths to cover an entire room.
+
+--- 9. Antenna Bandwidth  (Usable Range of Operating Frequencies) ---
+Definition: Antenna bandwidth is the range of frequencies over which an antenna meets specified performance requirements.
+Formula:
+  BW = f_H − f_L
+  where: f_H = highest operating frequency; f_L = lowest operating frequency
+
+--- 10. Effective Aperture  (Power-Capturing Area of a Receiving Antenna) ---
+Definition: Effective aperture represents an antenna's ability to capture power from an incoming electromagnetic wave.
+Key Points:
+  - It is measured in square metres (m²).
+  - Effective aperture is usually smaller than the physical aperture, because part of the incoming power is lost or not captured.
+Physical vs Effective Aperture:
+  - Physical Aperture — The actual physical area of the antenna that faces the incoming wave (e.g. the full surface of a dish).
+  - Effective Aperture — The equivalent area that actually captures power from the wave. Depends on gain and wavelength, not just size.
+Formula:
+  A_e = G · λ² / 4π
+  where: G = linear antenna gain; λ = wavelength
+
+Formulas Summary:
+  Directivity: D = 4π · U_max / P_rad
+    (U_max is the maximum radiation intensity and P_rad is the total radiated power.)
+  Antenna Efficiency: η = (P_rad / P_in) × 100%
+    (Ratio of the power radiated by an antenna to the power supplied to it.)
+  Antenna Bandwidth: BW = f_H − f_L
+    (f_H is the highest and f_L is the lowest operating frequency.)
+  Effective Aperture: A_e = G · λ² / 4π
+    (G is the linear antenna gain and λ is the wavelength.)
+
+Exam Tips:
+  - Define antenna gain, directivity and efficiency, and explain how they differ.
+  - An antenna receives 100 W and radiates 80 W — its efficiency is 80%.
+
+======================================================================
+TOPIC 3: PROPAGATION MODES
+======================================================================
+Ground Wave, Sky Wave, Line-of-Sight Propagation & Factors Affecting Propagation
+
+Key Concepts:
+  - Propagation modes: The different ways EM waves travel from a transmitting antenna to a receiving antenna
+  - Ground wave: Travels along the Earth's surface, useful at LF and MF
+  - Sky wave: Refracted back to Earth by the ionosphere, HF band (3–30 MHz)
+  - Line-of-sight: Direct path between antennas, used for VHF, UHF and microwave
+  - Radio horizon extends beyond the optical horizon due to atmospheric refraction
+  - Factors: Frequency, distance, atmosphere, obstacles, ground conductivity, antenna height, power and interference
+
+--- 1. Propagation Modes  (How Radio Waves Travel from Tx to Rx) ---
+Definition: Propagation modes are the different ways electromagnetic waves travel from a transmitting antenna to a receiving antenna.
+Key Points:
+  - Radio waves can travel along the Earth's surface, through the atmosphere, or directly between antennas.
+The Main Propagation Modes:
+  - Ground Wave — Travels along the Earth's surface.
+  - Sky Wave — Refracted back to Earth by the ionosphere.
+  - Line-of-Sight — Travels directly between antennas.
+
+--- 2. Ground-Wave Propagation  (Along the Earth's Surface) ---
+Definition: Ground-wave propagation is the transmission of radio waves along the Earth's surface.
+Working:
+  - Radio waves travel close to and follow the Earth's surface.
+  - The waves can bend around the Earth's curvature to some extent.
+  - Propagation depends on frequency and ground conductivity.
+Facts:
+  - Frequency: Particularly useful at lower frequencies, such as LF and MF.
+  - Applications: AM broadcasting at suitable frequencies, maritime communication and navigation systems.
+Advantages:
+  - Can cover beyond the visual horizon.
+  - Useful for communication over the Earth's surface.
+Disadvantages:
+  - Signal strength decreases with distance.
+  - Ground absorption can weaken the signal.
+  - Less suitable for high-frequency transmission over long distances.
+
+--- 3. Sky-Wave Propagation  (Refracted Back by the Ionosphere) ---
+Definition: Sky-wave propagation is the transmission of radio waves that travel toward the ionosphere and are refracted back toward the Earth.
+Working:
+  1. Upward transmission — The transmitting antenna sends radio waves upward.
+  2. Enters the ionosphere — The waves enter the ionosphere, a region of the upper atmosphere containing charged particles.
+  3. Refraction — Under suitable conditions, the waves are refracted back toward Earth.
+  4. Long distance — The signals can travel long distances, sometimes through multiple hops.
+Facts:
+  - Frequency: Commonly associated with the HF band (3–30 MHz).
+  - Applications: Shortwave broadcasting, amateur radio and long-distance radio communication.
+Advantages:
+  - Enables communication over very long distances.
+  - Can reach beyond the line of sight.
+Disadvantages:
+  - Depends on ionospheric conditions.
+  - Signal strength and quality may vary.
+  - Communication can be affected by solar activity and atmospheric changes.
+
+--- 4. Line-of-Sight (LOS) Propagation  (Direct Path Between Antennas) ---
+Definition: Line-of-sight propagation occurs when radio waves travel along a direct path between the transmitting and receiving antennas.
+Working:
+  - The transmitting antenna sends radio waves toward the receiver.
+  - The receiver must be within a suitable radio path, with sufficient clearance from obstacles.
+  - The Earth's curvature limits the distance between antennas near the ground.
+  - Radio horizon: the maximum distance for a direct radio path. It extends slightly beyond the optical (visual) horizon because the atmosphere bends radio waves, and increases with antenna height.
+Facts:
+  - Frequency: Commonly used for VHF, UHF and microwave communication.
+  - Applications: Television broadcasting, mobile communication, Wi-Fi links, microwave links and satellite communication.
+Advantages:
+  - Supports high data rates with suitable equipment.
+  - Provides relatively predictable propagation when the path is clear.
+  - Suitable for directional communication links.
+Disadvantages:
+  - Buildings, hills and other obstacles can block or weaken signals.
+  - Coverage is limited by the radio horizon.
+  - Often requires suitable antenna placement.
+
+--- 5. Factors Affecting Propagation Modes  (What Changes How Radio Waves Travel) ---
+8 Key Factors:
+  - Frequency — Different frequencies behave differently during propagation.
+  - Distance — Greater distances generally cause greater signal loss.
+  - Atmospheric Conditions — Temperature, humidity and ionospheric conditions can affect radio waves.
+  - Obstacles — Buildings, mountains and trees may block or weaken signals.
+  - Ground Conductivity — Affects ground-wave propagation.
+  - Antenna Height — Influences line-of-sight coverage.
+  - Transmitted Power — Affects the received signal strength.
+  - Interference — Other signals can affect communication quality.
+
+Exam Tips:
+  - Compare ground wave, sky wave and line-of-sight propagation by frequency, working and applications.
+  - Explain why the radio horizon extends beyond the optical horizon.
+
+======================================================================
+TOPIC 4: FADING IN MOBILE ENVIRONMENT
+======================================================================
+Causes, Multipath, Path Loss, Shadowing, Doppler, Types of Fading & Effects
+
+Key Concepts:
+  - Fading: Variation in received signal strength over time, distance or frequency
+  - Causes: Multipath, movement, obstacles, atmospheric conditions and interference
+  - Path loss reduces power with distance; shadowing is caused by obstacles
+  - Doppler shift: f_d = (v / λ) cos θ, caused by relative movement
+  - Types: Large/small-scale, fast/slow, Rayleigh/Rician
+
+--- 1. Fading  (Definition & Core Idea) ---
+Definition: Fading is the variation in the strength of a received signal over time, distance or frequency in a wireless communication system.
+Key Points:
+  - It occurs due to obstacles, movement of mobile devices and multipath propagation.
+Example: While talking on a mobile phone, the signal may become weak when you move behind a building.
+
+--- 2. Causes of Fading  (Why the Received Signal Varies) ---
+5 Causes:
+  - Multipath Propagation — Signals reach the receiver through different paths due to reflection, diffraction and scattering.
+  - Movement of Mobile Devices — Movement changes the signal paths and their relative phases.
+  - Obstacles — Buildings, trees and hills can block or weaken signals.
+  - Atmospheric Conditions — Changes in the environment can affect radio-wave propagation.
+  - Interference — Multiple signal components may combine and strengthen or weaken the received signal.
+
+--- 3. Multipath Propagation  (One Signal, Many Paths) ---
+Definition: Multipath propagation occurs when a transmitted signal reaches the receiver through multiple paths.
+Key Points:
+  - The signals may arrive at different times and with different phases.
+How the Copies Combine:
+  - Constructive Interference — Signals combine and strengthen the received signal.
+  - Destructive Interference — Signals combine and weaken the received signal.
+Important:
+  - Multipath propagation is a major cause of fading in mobile communication.
+
+--- 4. Path Loss  (Power Reduction with Distance) ---
+Definition: Path loss is the reduction in signal power as the distance between the transmitter and receiver increases.
+Example: A mobile phone generally receives a weaker signal when it moves farther away from a cell tower, assuming other conditions remain comparable.
+Important Difference:
+  - Path loss describes the overall reduction in signal power with distance, whereas fading describes signal variations around the expected signal level.
+
+--- 5. Shadowing  (Obstacles Blocking the Signal) ---
+Definition: Shadowing occurs when obstacles such as buildings, hills or trees obstruct radio waves and cause variations in the received signal strength.
+Key Points:
+  - Shadowing is also called shadow fading.
+Example: A mobile signal becomes weaker when a user enters a building.
+
+--- 6. Doppler Effect and Doppler Shift  (Frequency Change Due to Movement) ---
+Definition: The Doppler effect is the change in the observed frequency of a signal due to relative movement between the transmitter and receiver.
+Key Points:
+  - Greater movement speed generally produces a larger maximum Doppler shift.
+Formula:
+  f_d = (v / λ) · cos θ
+  where: f_d = Doppler frequency shift; v = relative speed; λ = wavelength; θ = angle between the direction of motion and the direction of wave arrival
+Example: When a person moves while using a mobile phone, the received radio signal may experience a frequency shift.
+
+--- 7. Large-Scale vs Small-Scale Fading  (Types of Fading (A & B)) ---
+Types:
+  - Large-Scale Fading — Variations in the average received signal power over relatively large distances. Includes path loss (power decreases with distance) and shadow fading (obstacles vary the average strength).
+  - Small-Scale Fading — Rapid variations in the received signal strength over short distances or periods. Commonly results from multipath propagation and movement.
+
+--- 8. Fast vs Slow Fading  (Types of Fading (C & D)) ---
+Types:
+  - Fast Fading — The received signal changes rapidly over a short period. Cause: rapid changes in signal paths and relative phases, often associated with movement and Doppler effects.; Example: A moving mobile user experiences rapid signal fluctuations.
+  - Slow Fading — The received signal changes more gradually over time. Cause: changes in shadowing and the surrounding environment.; Example: A mobile user gradually moving behind a large building experiences a change in signal strength.
+
+--- 9. Rayleigh vs Rician Fading  (Types of Fading (E & F) — Statistical Models) ---
+Types:
+  - Rayleigh Fading — A statistical model for multipath fading when there is no dominant direct line-of-sight component.; Example: Mobile communication in an urban environment where buildings obstruct the direct path.
+  - Rician Fading — A statistical model used when a dominant signal component, often a direct line-of-sight signal, exists alongside scattered multipath components.; Example: A wireless link with a clear direct path and additional reflected signals.
+
+--- 10. Effects of Fading  (Impact on Communication Quality) ---
+Disadvantages:
+  - Reduces received signal strength.
+  - Increases the probability of transmission errors.
+  - Can cause dropped calls.
+  - Reduces communication reliability.
+  - May decrease data transmission speed.
+
+Formulas Summary:
+  Doppler Shift: f_d = (v / λ) · cos θ
+    (Doppler frequency shift for relative speed v, wavelength λ and arrival angle θ.)
+
+Exam Tips:
+  - Differentiate path loss, shadowing and multipath fading with examples.
+  - Compare fast vs slow, and Rayleigh vs Rician fading.
+
+======================================================================
+TOPIC 5: SIGNAL ENCODING TECHNIQUES
+======================================================================
+Definition of Signal Encoding & the Four Encoding Techniques
+
+Key Concepts:
+  - Signal encoding: Converting data into a signal suitable for transmission over a medium
+  - Digital data → Digital signal
+  - Digital data → Analog signal
+  - Analog data → Digital signal
+  - Analog data → Analog signal
+
+--- 1. Signal Encoding Techniques  (Definition & the Four Techniques) ---
+Definition: Signal encoding is the process of converting data (digital or analog) into a signal (digital or analog) that is suitable for transmission over a communication medium.
+The Four Encoding Techniques:
+  - Digital Data → Digital Signal — Example: A computer sending data to another computer over an Ethernet (LAN) cable.
+  - Digital Data → Analog Signal — Example: A Wi-Fi router or dial-up modem sending digital data as radio or telephone-line waves.
+  - Analog Data → Digital Signal — Example: Your voice on a mobile call being digitized, or a song recorded as an MP3 file.
+  - Analog Data → Analog Signal — Example: AM and FM radio broadcasting a presenter's voice.
+
+Exam Tips:
+  - Define signal encoding.
+  - List the four signal encoding techniques with a one-line definition of each.
+
+======================================================================
+TOPIC 6: DIGITAL DATA TO ANALOG SIGNAL
+======================================================================
+Digital-to-Analog Modulation: BASK, BFSK, PSK & QPSK
+
+Key Concepts:
+  - Digital-to-analog conversion: Converting digital data (0s and 1s) into analog signals for transmission
+  - BASK: Carrier amplitude changes according to the data
+  - BFSK: Carrier frequency changes according to the data
+  - PSK: Carrier phase changes according to the data (BPSK, QPSK, DPSK)
+  - QPSK: Four phases, each dibit (2 bits) mapped to one phase
+
+--- 1. Digital-to-Analog Conversion  (Definition & Types) ---
+Definition: Digital-to-analog conversion is the process of converting digital data (0s and 1s) into analog signals for transmission through a communication medium.
+Key Points:
+  - It is also called digital-to-analog modulation.
+The Important Techniques:
+  - BASK — Binary Amplitude Shift Keying
+  - BFSK — Binary Frequency Shift Keying
+  - PSK — Phase Shift Keying
+  - QPSK — Quadrature Phase Shift Keying
+Example: A digital modem uses modulation to transmit computer data over a communication channel.
+
+--- 2. Binary Amplitude Shift Keying (BASK)  (Amplitude Changes with the Data) ---
+Definition: BASK is a digital modulation technique in which the amplitude of the carrier signal changes according to the digital data.
+Working:
+  - When the input bit is 1, a carrier signal with a particular amplitude is transmitted.
+  - When the input bit is 0, the carrier may have zero or a different amplitude, depending on the scheme.
+  - The receiver detects the amplitude to recover the transmitted bits.
+Example: Binary Amplitude Shift Keying (BASK):
+| Input bit | Carrier amplitude |
+|-----------|-------------------|
+| 1         | High              |
+| 0         | Zero or low       |
+Advantages:
+  - Simple to implement.
+  - Requires relatively simple circuitry.
+Disadvantages:
+  - Sensitive to noise and amplitude variations.
+
+--- 3. Binary Frequency Shift Keying (BFSK)  (Frequency Changes with the Data) ---
+Definition: BFSK is a digital modulation technique in which the frequency of the carrier changes according to the digital data.
+Working:
+  - Bit 1 is represented by one frequency.
+  - Bit 0 is represented by another frequency.
+  - The receiver identifies the frequency and recovers the bits.
+Example: Binary Frequency Shift Keying (BFSK):
+| Input bit | Carrier frequency |
+|-----------|-------------------|
+| 1         | Higher frequency  |
+| 0         | Lower frequency   |
+Advantages:
+  - Generally less sensitive to amplitude variations than BASK.
+  - Can provide reliable communication in noisy environments.
+Disadvantages:
+  - Can require more bandwidth than some other modulation techniques.
+
+--- 4. Phase Shift Keying (PSK)  (Phase Changes with the Data) ---
+Definition: PSK is a digital modulation technique in which the phase of the carrier signal changes according to the digital data.
+Working:
+  - Different digital symbols are represented by different carrier phases.
+  - The receiver detects the phase or phase difference and recovers the transmitted data.
+Example: Binary Phase Shift Keying (BPSK):
+| Input bit | Carrier phase |
+|-----------|---------------|
+| 1         | 0°            |
+| 0         | 180°          |
+Advantages:
+  - Good noise performance compared with BASK in many conditions.
+  - Efficient use of transmission power.
+Disadvantages:
+  - Some PSK systems require accurate carrier synchronization.
+
+--- 5. Quadrature Phase Shift Keying (QPSK)  (Four Phases, Two Bits per Symbol) ---
+Definition: QPSK is a phase shift keying technique that uses four carrier phases, so each symbol carries 2 bits.
+Working:
+  - The input bits are grouped into pairs called dibits (00, 01, 11, 10).
+  - Each dibit is represented by one of four carrier phases.
+  - The receiver detects the phase of each symbol and recovers both bits.
+Example: QPSK Phase Assignment (Gray coded):
+| Dibit | Carrier phase |
+|-------|---------------|
+| 00    | 45°           |
+| 01    | 135°          |
+| 11    | 225°          |
+| 10    | 315°          |
+Advantages:
+  - Carries twice as many bits per symbol as BPSK.
+  - Needs about half the bandwidth of BPSK for the same bit rate.
+Disadvantages:
+  - The receiver must distinguish four phases, so it is more complex than BPSK.
+  - Requires accurate carrier synchronization.
+
+Exam Tips:
+  - Explain BASK, BFSK, PSK and QPSK with their working principles.
+  - Compare BASK, BFSK, BPSK and QPSK.
+
+======================================================================
+TOPIC 7: ANALOG DATA TO ANALOG SIGNAL
+======================================================================
+Analog Modulation: AM, FM & PM
+
+Key Concepts:
+  - Analog-to-analog conversion: Transmitting analog information using an analog carrier signal
+  - AM: Carrier amplitude varies with the message; modulation index m = A_m / A_c
+  - FM: Instantaneous frequency varies with the message; β = Δf / f_m
+  - PM: Carrier phase varies with the message
+  - AM → Amplitude, FM → Frequency, PM → Phase
+
+--- 1. Analog-to-Analog Conversion  (Definition & Types) ---
+Definition: Analog-to-analog conversion is the process of transmitting analog information using an analog carrier signal.
+Key Points:
+  - It is also called analog modulation.
+  - The figure shows the two inputs: the message (the information) and the carrier (a plain high-frequency wave that carries no information on its own).
+  - The modulator combines them into the modulated signal (AM, FM or PM), shown on the next slides.
+The Three Main Techniques:
+  - AM — Amplitude Modulation
+  - FM — Frequency Modulation
+  - PM — Phase Modulation
+Example: In conventional AM radio broadcasting, the amplitude of a carrier signal varies according to the audio signal.
+
+--- 2. Amplitude Modulation (AM)  (Carrier Amplitude Follows the Message) ---
+Definition: AM is a modulation technique in which the amplitude of the carrier signal varies according to the instantaneous amplitude of the message signal.
+Working:
+  1. Message input — The message signal, such as audio, is supplied to the modulator.
+  2. Modulation — The modulator varies the carrier amplitude according to the message.
+  3. Transmission — The modulated signal is transmitted through an antenna.
+  4. Demodulation — The receiver demodulates the signal to recover the original audio.
+Important Point:
+  - In conventional AM, the carrier frequency remains constant while its amplitude varies.
+Formula:
+Modulation Index:
+  m = A_m / A_c
+  where: m = modulation index; A_m = peak amplitude of the modulating signal; A_c = amplitude of the unmodulated carrier
+  Note: For a single-tone message and conventional AM, m is normally kept at or below 1 to avoid overmodulation.
+Advantages:
+  - Simple to generate and demodulate.
+  - Can be implemented using relatively simple receivers.
+Disadvantages:
+  - More sensitive to amplitude noise.
+  - Conventional AM can be power-inefficient.
+
+--- 3. Frequency Modulation (FM)  (Carrier Frequency Follows the Message) ---
+Definition: FM is a modulation technique in which the instantaneous frequency of the carrier varies according to the message signal.
+Working:
+  1. Message input — The message signal is supplied to the modulator.
+  2. Modulation — The carrier frequency increases or decreases according to the message.
+  3. Transmission — The modulated signal is transmitted.
+  4. Demodulation — The receiver detects the frequency variations and recovers the original message.
+Important Point:
+  - In ideal FM, the carrier amplitude remains constant while its instantaneous frequency varies.
+Formula:
+FM Modulation Index:
+  β = Δf / f_m
+  where: β = FM modulation index; Δf = peak frequency deviation; f_m = modulating frequency
+Advantages:
+  - Better resistance to amplitude noise than conventional AM.
+  - Can provide good audio quality.
+Disadvantages:
+  - Often requires more bandwidth than conventional AM.
+  - The transmitter and receiver can be more complex.
+
+--- 4. Phase Modulation (PM)  (Carrier Phase Follows the Message) ---
+Definition: PM is a modulation technique in which the phase of the carrier signal varies according to the instantaneous amplitude of the message signal.
+Working:
+  1. Message input — The message signal is supplied to the modulator.
+  2. Modulation — The modulator changes the carrier phase according to the message.
+  3. Transmission — The modulated signal is transmitted.
+  4. Demodulation — The receiver detects the phase variations to recover the message.
+Important Point:
+  - In PM, the carrier's phase varies according to the message signal. Its instantaneous frequency also varies when the message phase changes over time.
+Advantages:
+  - Can provide good resistance to amplitude noise.
+  - Forms an important foundation for digital phase modulation.
+Disadvantages:
+  - Requires suitable phase-modulation and demodulation circuits.
+  - The resulting frequency variations depend on how the message changes.
+
+Formulas Summary:
+  AM Modulation Index: m = A_m / A_c
+    (Peak message amplitude divided by unmodulated carrier amplitude; kept at or below 1.)
+  FM Modulation Index: β = Δf / f_m
+    (Peak frequency deviation divided by modulating frequency.)
+
+Exam Tips:
+  - Explain AM, FM and PM, and compare them.
+  - Define modulation index and frequency deviation.
+
+======================================================================
+TOPIC 8: ANALOG DATA TO DIGITAL SIGNAL
+======================================================================
+Sampling, Quantization, Encoding & PCM
+
+Key Concepts:
+  - Analog-to-digital conversion: Converting continuous analog information into binary data using an ADC
+  - Three steps: Sampling, quantization and encoding
+  - Nyquist: f_s ≥ 2·f_max, otherwise aliasing may occur
+  - PCM: L = 2^n levels, bit rate R_b = n·f_s (8000 × 8 = 64 kbps)
+
+--- 1. Analog-to-Digital Conversion  (Definition & Main Steps) ---
+Definition: Analog-to-digital conversion is the process of converting continuous analog information into digital data represented by binary bits.
+Key Points:
+  - It is commonly performed using an Analog-to-Digital Converter (ADC).
+The Three Fundamental Steps:
+  - Sampling — Measuring the signal at regular time intervals.
+  - Quantization — Assigning each sample to a permitted level.
+  - Encoding — Representing each level with binary bits.
+Example: A microphone captures sound as an analog signal. An ADC converts that signal into digital samples so a computer can process or store it.
+
+--- 2. Sampling  (Measuring the Signal at Regular Intervals) ---
+Definition: Sampling is the process of measuring the amplitude of an analog signal at regular time intervals.
+Working:
+  - The analog signal enters the sampling system.
+  - Its amplitude is measured at specific time intervals.
+  - These measurements form a sequence of samples.
+Example: A digital audio system samples an analog sound signal thousands of times per second.
+
+--- 3. Quantization  (Rounding Samples to Permitted Levels) ---
+Definition: Quantization is the process of assigning each sampled amplitude to one of a finite number of permitted amplitude levels.
+Working:
+  - The sampler produces amplitude measurements.
+  - Each measurement is assigned to the nearest permitted quantization level.
+  - The result is a sequence of discrete amplitude values.
+Important Point:
+  - Quantization introduces a difference between the original sample and its assigned level. This difference is called quantization error.
+Example: A sampled voltage of 2.3 V might be assigned to a quantization level of 2.25 V.
+
+--- 4. Encoding  (Representing Levels with Binary Bits) ---
+Definition: Encoding is the process of representing quantized values using binary bits.
+Working:
+  - Each quantization level is assigned a binary code.
+  - The encoder converts each quantized sample into its corresponding binary code.
+  - The binary data can then be stored or transmitted digitally.
+
+--- 5. Pulse Code Modulation (PCM)  (Sampling + Quantization + Encoding) ---
+Definition: Pulse Code Modulation (PCM) is a technique that converts an analog signal into digital data through sampling, quantization and encoding.
+Working of PCM:
+  1. Sampling — Measures the analog signal at regular intervals.
+  2. Quantization — Assigns each sample to a permitted amplitude level.
+  3. Encoding — Converts each quantized level into a binary code.
+  4. Transmission — The binary data is transmitted through a digital communication system.
+  5. Reconstruction — At the receiving end, the data is decoded and processed to reconstruct an approximation of the original signal.
+Advantages:
+  - Supports digital storage and processing.
+  - Can provide good noise immunity when signals are regenerated correctly.
+  - Works well with digital communication networks.
+Disadvantages:
+  - Requires bandwidth for transmitting the digital data.
+  - Quantization introduces error.
+  - ADC and DAC circuits are required when interfacing with analog signals.
+
+Formulas Summary:
+  Nyquist Sampling Rate: f_s ≥ 2 · f_max
+    (Minimum sampling frequency for ideal reconstruction of a band-limited signal.)
+  Quantization Levels: L = 2ⁿ
+    (Number of levels L for n bits per sample.)
+  PCM Bit Rate: R_b = n · f_s
+    (8,000 samples/s × 8 bits = 64 kbps.)
+
+Exam Tips:
+  - Explain sampling, quantization and encoding, and PCM with a block diagram.
+
+======================================================================
+EXAM CHECKLIST
+======================================================================
+  [1. Wireless Comm Tech] Explain 1G through 5G cellular architecture and key specifications
+  [1. Wireless Comm Tech] Identify EM spectrum bands used in cellular, Wi-Fi, and satellite
+  [2. Antennas] Define radiation pattern, directivity, gain, HPBW, and effective aperture
+  [2. Antennas] Sketch radiation patterns of isotropic, dipole, and directional antennas
+  [2. Antennas] Compare dipole, monopole, Yagi-Uda, and microstrip patch antennas
+  [3. Propagation Modes] Differentiate Ground Wave, Sky Wave, and Line-of-Sight propagation
+  [3. Propagation Modes] Explain Reflection, Refraction, Knife-edge Diffraction, and Scattering
+  [3. Propagation Modes] Calculate radio horizon distance and first Fresnel zone clearance
+  [4. Fading] Contrast Large-scale fading (path loss & shadowing) with Small-scale multipath
+  [4. Fading] Differentiate Fast vs Slow fading
+  [4. Fading] Explain Rayleigh vs Rician distributions
+  [5. Encoding Techniques] Define signal encoding and list the four encoding techniques with definitions
+  [6. Digital Data to Analog] Define digital-to-analog modulation and explain BASK, BFSK, PSK and QPSK
+  [6. Digital Data to Analog] Compare BASK, BFSK, BPSK and QPSK
+  [7. Analog Data to Analog] Define analog modulation and explain AM, FM and PM
+  [7. Analog Data to Analog] Define modulation index and frequency deviation; compare AM, FM and PM
+  [8. Analog Data to Digital] Explain sampling, quantization, encoding and the Nyquist rate
+  [8. Analog Data to Digital] Explain PCM with a block diagram and calculate PCM bit rate

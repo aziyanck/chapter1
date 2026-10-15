@@ -1,0 +1,73 @@
+======================================================================
+TOPIC 8: ANALOG DATA TO DIGITAL SIGNAL
+======================================================================
+Sampling, Quantization, Encoding & PCM
+
+Key Concepts:
+  - Analog-to-digital conversion: Converting continuous analog information into binary data using an ADC
+  - Three steps: Sampling, quantization and encoding
+  - Nyquist: f_s ≥ 2·f_max, otherwise aliasing may occur
+  - PCM: L = 2^n levels, bit rate R_b = n·f_s (8000 × 8 = 64 kbps)
+
+--- 1. Analog-to-Digital Conversion  (Definition & Main Steps) ---
+Definition: Analog-to-digital conversion is the process of converting continuous analog information into digital data represented by binary bits.
+Key Points:
+  - It is commonly performed using an Analog-to-Digital Converter (ADC).
+The Three Fundamental Steps:
+  - Sampling — Measuring the signal at regular time intervals.
+  - Quantization — Assigning each sample to a permitted level.
+  - Encoding — Representing each level with binary bits.
+Example: A microphone captures sound as an analog signal. An ADC converts that signal into digital samples so a computer can process or store it.
+
+--- 2. Sampling  (Measuring the Signal at Regular Intervals) ---
+Definition: Sampling is the process of measuring the amplitude of an analog signal at regular time intervals.
+Working:
+  - The analog signal enters the sampling system.
+  - Its amplitude is measured at specific time intervals.
+  - These measurements form a sequence of samples.
+Example: A digital audio system samples an analog sound signal thousands of times per second.
+
+--- 3. Quantization  (Rounding Samples to Permitted Levels) ---
+Definition: Quantization is the process of assigning each sampled amplitude to one of a finite number of permitted amplitude levels.
+Working:
+  - The sampler produces amplitude measurements.
+  - Each measurement is assigned to the nearest permitted quantization level.
+  - The result is a sequence of discrete amplitude values.
+Important Point:
+  - Quantization introduces a difference between the original sample and its assigned level. This difference is called quantization error.
+Example: A sampled voltage of 2.3 V might be assigned to a quantization level of 2.25 V.
+
+--- 4. Encoding  (Representing Levels with Binary Bits) ---
+Definition: Encoding is the process of representing quantized values using binary bits.
+Working:
+  - Each quantization level is assigned a binary code.
+  - The encoder converts each quantized sample into its corresponding binary code.
+  - The binary data can then be stored or transmitted digitally.
+
+--- 5. Pulse Code Modulation (PCM)  (Sampling + Quantization + Encoding) ---
+Definition: Pulse Code Modulation (PCM) is a technique that converts an analog signal into digital data through sampling, quantization and encoding.
+Working of PCM:
+  1. Sampling — Measures the analog signal at regular intervals.
+  2. Quantization — Assigns each sample to a permitted amplitude level.
+  3. Encoding — Converts each quantized level into a binary code.
+  4. Transmission — The binary data is transmitted through a digital communication system.
+  5. Reconstruction — At the receiving end, the data is decoded and processed to reconstruct an approximation of the original signal.
+Advantages:
+  - Supports digital storage and processing.
+  - Can provide good noise immunity when signals are regenerated correctly.
+  - Works well with digital communication networks.
+Disadvantages:
+  - Requires bandwidth for transmitting the digital data.
+  - Quantization introduces error.
+  - ADC and DAC circuits are required when interfacing with analog signals.
+
+Formulas Summary:
+  Nyquist Sampling Rate: f_s ≥ 2 · f_max
+    (Minimum sampling frequency for ideal reconstruction of a band-limited signal.)
+  Quantization Levels: L = 2ⁿ
+    (Number of levels L for n bits per sample.)
+  PCM Bit Rate: R_b = n · f_s
+    (8,000 samples/s × 8 bits = 64 kbps.)
+
+Exam Tips:
+  - Explain sampling, quantization and encoding, and PCM with a block diagram.

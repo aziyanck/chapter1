@@ -1,0 +1,116 @@
+======================================================================
+TOPIC 2: ANTENNAS
+======================================================================
+Antenna Basics, Types, Radiation Pattern, Gain, Directivity, Efficiency, Polarization, Beamwidth, Bandwidth & Aperture
+
+Key Concepts:
+  - Antenna: Converts electrical signals into EM waves (transmission) and EM waves into electrical signals (reception)
+  - 7 Types: Dipole, Monopole, Loop, Yagi-Uda, Parabolic Reflector, Horn, and Microstrip (Patch)
+  - Radiation Pattern: Omnidirectional, Directional, and Isotropic
+  - Parameters: Gain, Directivity, Efficiency, Beamwidth, Bandwidth, and Effective Aperture
+  - Polarization: Linear, Circular, and Elliptical orientation of the electric field
+
+--- 1. Antenna  (Definition & Examples) ---
+Definition: An antenna is a device that converts electrical signals into electromagnetic waves for transmission and electromagnetic waves into electrical signals during reception.
+Examples:
+  - Mobile Phones
+  - Wi-Fi Routers
+  - Satellite Dishes
+
+--- 2. Types of Antennas  (7 Common Antenna Structures) ---
+Items:
+  - Dipole Antenna — Consists of two conductive elements.; Example: Radio communication
+  - Monopole Antenna — Consists of a single radiating element.; Example: Mobile and vehicle communication
+  - Loop Antenna — Consists of a conductor arranged in a closed loop.; Example: Radio receivers and RFID systems
+  - Yagi-Uda Antenna — A directional antenna with a driven element, reflector and directors.; Example: Television reception
+  - Parabolic Reflector Antenna — Uses a dish-shaped reflector to concentrate signals in a particular direction.; Example: Satellite communication
+  - Horn Antenna — Uses a flared structure to transmit or receive electromagnetic waves.; Example: Radar and microwave communication
+  - Microstrip (Patch) Antenna — A compact, flat antenna.; Example: Mobile phones, GPS devices and wireless systems
+
+--- 3. Radiation Pattern  (Strength of Radiation vs Direction) ---
+Definition: A radiation pattern is a graphical representation of the strength of radiation in different directions around an antenna.
+Types of Radiation Pattern:
+  - Omnidirectional — Provides broad coverage around the antenna in a particular plane.
+  - Directional — Concentrates radiation in a specific direction.
+  - Isotropic — Radiates equally in all directions.
+
+--- 4. Antenna Gain  (Directing Energy Compared to a Reference) ---
+Definition: Antenna gain indicates how effectively an antenna directs energy in a particular direction compared with a reference antenna.
+Key Points:
+  - High gain generally means more concentrated radiation.
+  - Gain is commonly measured in dBi or dBd.
+  - High-gain antennas are useful for long-distance communication.
+  - Zero gain (0 dBi) means the antenna radiates the same as an isotropic antenna, with no concentration of energy in any direction.
+
+--- 5. Directivity  (Concentration of Radiation vs an Isotropic Radiator) ---
+Definition: Directivity measures how strongly an antenna concentrates its radiation in a particular direction compared with an isotropic radiator.
+Key Points:
+  - High directivity means radiation is more concentrated in a particular direction.
+  - It does not account for antenna losses.
+  - Gain = Efficiency × Directivity (G = η · D), so gain includes losses but directivity does not.
+Formula:
+  D = 4π · U_max / P_rad
+  where: U_max = maximum radiation intensity; P_rad = total radiated power
+
+--- 6. Antenna Efficiency  (Radiated Power vs Input Power) ---
+Definition: Antenna efficiency is the ratio of the power radiated by an antenna to the power supplied to it.
+Formula:
+  η = (P_rad / P_in) × 100%
+  where: P_rad = power radiated by the antenna; P_in = input power supplied to the antenna
+Example: If an antenna receives 100 W of input power and radiates 80 W, its radiation efficiency is 80%.
+
+--- 7. Antenna Polarization  (Orientation of the Electric Field) ---
+Definition: Polarization describes the orientation and movement of the electric field of an electromagnetic wave.
+Types of Polarization:
+  - Linear — The electric field oscillates along a straight line (vertical or horizontal).; Example: FM/AM radio, mobile towers (vertical)
+  - Circular — The electric field rotates in a circular path with constant strength (RHCP or LHCP).; Example: GPS, satellite TV, RFID
+  - Elliptical — The electric field traces an elliptical path. Linear and circular are special cases of elliptical.; Example: Most practical antennas
+Why Polarization Matters:
+  - The antenna's shape and orientation decide the polarization: a vertical rod sends vertically polarized waves.
+  - The receiving antenna must match the transmitter's polarization, otherwise signal is lost (polarization mismatch loss).
+Polarization Mismatch:
+| Transmitter | Receiver           | Result                      |
+|-------------|--------------------|-----------------------------|
+| Vertical    | Vertical           | Full signal                 |
+| Vertical    | Tilted 45°         | Half the power lost         |
+| Vertical    | Horizontal         | Almost no signal            |
+| Circular    | Linear (any angle) | Half the power lost         |
+
+--- 8. Beamwidth  (Angular Width of the Main Lobe) ---
+Definition: Beamwidth is the angular width of an antenna's main radiation lobe.
+Narrow vs Wide Beamwidth:
+  - Narrow Beamwidth — Concentrates radiation in a smaller angular region.
+  - Wide Beamwidth — Covers a larger angular region.
+Example: Satellite dishes generally have narrow beamwidths, while Wi-Fi router antennas have wide beamwidths to cover an entire room.
+
+--- 9. Antenna Bandwidth  (Usable Range of Operating Frequencies) ---
+Definition: Antenna bandwidth is the range of frequencies over which an antenna meets specified performance requirements.
+Formula:
+  BW = f_H − f_L
+  where: f_H = highest operating frequency; f_L = lowest operating frequency
+
+--- 10. Effective Aperture  (Power-Capturing Area of a Receiving Antenna) ---
+Definition: Effective aperture represents an antenna's ability to capture power from an incoming electromagnetic wave.
+Key Points:
+  - It is measured in square metres (m²).
+  - Effective aperture is usually smaller than the physical aperture, because part of the incoming power is lost or not captured.
+Physical vs Effective Aperture:
+  - Physical Aperture — The actual physical area of the antenna that faces the incoming wave (e.g. the full surface of a dish).
+  - Effective Aperture — The equivalent area that actually captures power from the wave. Depends on gain and wavelength, not just size.
+Formula:
+  A_e = G · λ² / 4π
+  where: G = linear antenna gain; λ = wavelength
+
+Formulas Summary:
+  Directivity: D = 4π · U_max / P_rad
+    (U_max is the maximum radiation intensity and P_rad is the total radiated power.)
+  Antenna Efficiency: η = (P_rad / P_in) × 100%
+    (Ratio of the power radiated by an antenna to the power supplied to it.)
+  Antenna Bandwidth: BW = f_H − f_L
+    (f_H is the highest and f_L is the lowest operating frequency.)
+  Effective Aperture: A_e = G · λ² / 4π
+    (G is the linear antenna gain and λ is the wavelength.)
+
+Exam Tips:
+  - Define antenna gain, directivity and efficiency, and explain how they differ.
+  - An antenna receives 100 W and radiates 80 W — its efficiency is 80%.

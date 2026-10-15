@@ -1,0 +1,90 @@
+======================================================================
+TOPIC 7: ANALOG DATA TO ANALOG SIGNAL
+======================================================================
+Analog Modulation: AM, FM & PM
+
+Key Concepts:
+  - Analog-to-analog conversion: Transmitting analog information using an analog carrier signal
+  - AM: Carrier amplitude varies with the message; modulation index m = A_m / A_c
+  - FM: Instantaneous frequency varies with the message; β = Δf / f_m
+  - PM: Carrier phase varies with the message
+  - AM → Amplitude, FM → Frequency, PM → Phase
+
+--- 1. Analog-to-Analog Conversion  (Definition & Types) ---
+Definition: Analog-to-analog conversion is the process of transmitting analog information using an analog carrier signal.
+Key Points:
+  - It is also called analog modulation.
+  - The figure shows the two inputs: the message (the information) and the carrier (a plain high-frequency wave that carries no information on its own).
+  - The modulator combines them into the modulated signal (AM, FM or PM), shown on the next slides.
+The Three Main Techniques:
+  - AM — Amplitude Modulation
+  - FM — Frequency Modulation
+  - PM — Phase Modulation
+Example: In conventional AM radio broadcasting, the amplitude of a carrier signal varies according to the audio signal.
+
+--- 2. Amplitude Modulation (AM)  (Carrier Amplitude Follows the Message) ---
+Definition: AM is a modulation technique in which the amplitude of the carrier signal varies according to the instantaneous amplitude of the message signal.
+Working:
+  1. Message input — The message signal, such as audio, is supplied to the modulator.
+  2. Modulation — The modulator varies the carrier amplitude according to the message.
+  3. Transmission — The modulated signal is transmitted through an antenna.
+  4. Demodulation — The receiver demodulates the signal to recover the original audio.
+Important Point:
+  - In conventional AM, the carrier frequency remains constant while its amplitude varies.
+Formula:
+Modulation Index:
+  m = A_m / A_c
+  where: m = modulation index; A_m = peak amplitude of the modulating signal; A_c = amplitude of the unmodulated carrier
+  Note: For a single-tone message and conventional AM, m is normally kept at or below 1 to avoid overmodulation.
+Advantages:
+  - Simple to generate and demodulate.
+  - Can be implemented using relatively simple receivers.
+Disadvantages:
+  - More sensitive to amplitude noise.
+  - Conventional AM can be power-inefficient.
+
+--- 3. Frequency Modulation (FM)  (Carrier Frequency Follows the Message) ---
+Definition: FM is a modulation technique in which the instantaneous frequency of the carrier varies according to the message signal.
+Working:
+  1. Message input — The message signal is supplied to the modulator.
+  2. Modulation — The carrier frequency increases or decreases according to the message.
+  3. Transmission — The modulated signal is transmitted.
+  4. Demodulation — The receiver detects the frequency variations and recovers the original message.
+Important Point:
+  - In ideal FM, the carrier amplitude remains constant while its instantaneous frequency varies.
+Formula:
+FM Modulation Index:
+  β = Δf / f_m
+  where: β = FM modulation index; Δf = peak frequency deviation; f_m = modulating frequency
+Advantages:
+  - Better resistance to amplitude noise than conventional AM.
+  - Can provide good audio quality.
+Disadvantages:
+  - Often requires more bandwidth than conventional AM.
+  - The transmitter and receiver can be more complex.
+
+--- 4. Phase Modulation (PM)  (Carrier Phase Follows the Message) ---
+Definition: PM is a modulation technique in which the phase of the carrier signal varies according to the instantaneous amplitude of the message signal.
+Working:
+  1. Message input — The message signal is supplied to the modulator.
+  2. Modulation — The modulator changes the carrier phase according to the message.
+  3. Transmission — The modulated signal is transmitted.
+  4. Demodulation — The receiver detects the phase variations to recover the message.
+Important Point:
+  - In PM, the carrier's phase varies according to the message signal. Its instantaneous frequency also varies when the message phase changes over time.
+Advantages:
+  - Can provide good resistance to amplitude noise.
+  - Forms an important foundation for digital phase modulation.
+Disadvantages:
+  - Requires suitable phase-modulation and demodulation circuits.
+  - The resulting frequency variations depend on how the message changes.
+
+Formulas Summary:
+  AM Modulation Index: m = A_m / A_c
+    (Peak message amplitude divided by unmodulated carrier amplitude; kept at or below 1.)
+  FM Modulation Index: β = Δf / f_m
+    (Peak frequency deviation divided by modulating frequency.)
+
+Exam Tips:
+  - Explain AM, FM and PM, and compare them.
+  - Define modulation index and frequency deviation.

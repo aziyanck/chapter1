@@ -1,0 +1,96 @@
+======================================================================
+TOPIC 6: DIGITAL DATA TO ANALOG SIGNAL
+======================================================================
+Digital-to-Analog Modulation: BASK, BFSK, PSK & QPSK
+
+Key Concepts:
+  - Digital-to-analog conversion: Converting digital data (0s and 1s) into analog signals for transmission
+  - BASK: Carrier amplitude changes according to the data
+  - BFSK: Carrier frequency changes according to the data
+  - PSK: Carrier phase changes according to the data (BPSK, QPSK, DPSK)
+  - QPSK: Four phases, each dibit (2 bits) mapped to one phase
+
+--- 1. Digital-to-Analog Conversion  (Definition & Types) ---
+Definition: Digital-to-analog conversion is the process of converting digital data (0s and 1s) into analog signals for transmission through a communication medium.
+Key Points:
+  - It is also called digital-to-analog modulation.
+The Important Techniques:
+  - BASK — Binary Amplitude Shift Keying
+  - BFSK — Binary Frequency Shift Keying
+  - PSK — Phase Shift Keying
+  - QPSK — Quadrature Phase Shift Keying
+Example: A digital modem uses modulation to transmit computer data over a communication channel.
+
+--- 2. Binary Amplitude Shift Keying (BASK)  (Amplitude Changes with the Data) ---
+Definition: BASK is a digital modulation technique in which the amplitude of the carrier signal changes according to the digital data.
+Working:
+  - When the input bit is 1, a carrier signal with a particular amplitude is transmitted.
+  - When the input bit is 0, the carrier may have zero or a different amplitude, depending on the scheme.
+  - The receiver detects the amplitude to recover the transmitted bits.
+Example: Binary Amplitude Shift Keying (BASK):
+| Input bit | Carrier amplitude |
+|-----------|-------------------|
+| 1         | High              |
+| 0         | Zero or low       |
+Advantages:
+  - Simple to implement.
+  - Requires relatively simple circuitry.
+Disadvantages:
+  - Sensitive to noise and amplitude variations.
+
+--- 3. Binary Frequency Shift Keying (BFSK)  (Frequency Changes with the Data) ---
+Definition: BFSK is a digital modulation technique in which the frequency of the carrier changes according to the digital data.
+Working:
+  - Bit 1 is represented by one frequency.
+  - Bit 0 is represented by another frequency.
+  - The receiver identifies the frequency and recovers the bits.
+Example: Binary Frequency Shift Keying (BFSK):
+| Input bit | Carrier frequency |
+|-----------|-------------------|
+| 1         | Higher frequency  |
+| 0         | Lower frequency   |
+Advantages:
+  - Generally less sensitive to amplitude variations than BASK.
+  - Can provide reliable communication in noisy environments.
+Disadvantages:
+  - Can require more bandwidth than some other modulation techniques.
+
+--- 4. Phase Shift Keying (PSK)  (Phase Changes with the Data) ---
+Definition: PSK is a digital modulation technique in which the phase of the carrier signal changes according to the digital data.
+Working:
+  - Different digital symbols are represented by different carrier phases.
+  - The receiver detects the phase or phase difference and recovers the transmitted data.
+Example: Binary Phase Shift Keying (BPSK):
+| Input bit | Carrier phase |
+|-----------|---------------|
+| 1         | 0°            |
+| 0         | 180°          |
+Advantages:
+  - Good noise performance compared with BASK in many conditions.
+  - Efficient use of transmission power.
+Disadvantages:
+  - Some PSK systems require accurate carrier synchronization.
+
+--- 5. Quadrature Phase Shift Keying (QPSK)  (Four Phases, Two Bits per Symbol) ---
+Definition: QPSK is a phase shift keying technique that uses four carrier phases, so each symbol carries 2 bits.
+Working:
+  - The input bits are grouped into pairs called dibits (00, 01, 11, 10).
+  - Each dibit is represented by one of four carrier phases.
+  - The receiver detects the phase of each symbol and recovers both bits.
+Example: QPSK Phase Assignment (Gray coded):
+| Dibit | Carrier phase |
+|-------|---------------|
+| 00    | 45°           |
+| 01    | 135°          |
+| 11    | 225°          |
+| 10    | 315°          |
+Advantages:
+  - Carries twice as many bits per symbol as BPSK.
+  - Needs about half the bandwidth of BPSK for the same bit rate.
+Disadvantages:
+  - The receiver must distinguish four phases, so it is more complex than BPSK.
+  - Requires accurate carrier synchronization.
+
+Exam Tips:
+  - Explain BASK, BFSK, PSK and QPSK with their working principles.
+  - Compare BASK, BFSK, BPSK and QPSK.

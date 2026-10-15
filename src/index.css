@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    background-color: #f7f4eb;
+    color: #121212;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-image: radial-gradient(#d3cbbd 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    min-height: 100vh;
+    letter-spacing: -0.01em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Neo-Brutalist Dark Mode Theme */
+  html.dark,
+  body.dark,
+  html.dark body {
+    background-color: #0b0d14 !important;
+    color: #f8fafc !important;
+    background-image: radial-gradient(#222738 1.5px, transparent 1.5px) !important;
+  }
+}
+
+.intro-bg {
+  background-color: #f7f4eb;
+  background-image: radial-gradient(#d3cbbd 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+.dark .intro-bg,
+body.dark .intro-bg {
+  background-color: #0b0d14;
+  background-image: radial-gradient(#222738 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Neo-Brutalist Utility Classes */
+.neo-border {
+  border: 2.5px solid #000000;
+}
+
+.neo-border-thick {
+  border: 3.5px solid #000000;
+}
+
+.neo-shadow-sm {
+  box-shadow: 3px 3px 0px 0px #000000;
+}
+
+.neo-shadow {
+  box-shadow: 5px 5px 0px 0px #000000;
+}
+
+.neo-shadow-lg {
+  box-shadow: 8px 8px 0px 0px #000000;
+}
+
+.neo-shadow-xl {
+  box-shadow: 12px 12px 0px 0px #000000;
+}
+
+/* Button with tactile mechanical feel */
+.neo-btn {
+  border: 2.5px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+  transition: all 0.12s ease-in-out;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.neo-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+.neo-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.dark .neo-card {
+  background-color: #161926;
+  color: #ffffff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Neo-Brutalist scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1ebd8;
+  border-left: 2px solid #000000;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #141724;
+  border-left: 2px solid #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #facc15;
+  border: 2px solid #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fbbf24;
+}
+
+/* Dark Mode SVG Readability Rules */
+.dark svg text {
+  fill: #f8fafc;
+}
+
+.dark svg text.keep-dark,
+.dark svg g.keep-dark text,
+.dark svg rect[fill="#fde047"] ~ text,
+.dark svg rect[fill="#facc15"] ~ text {
+  fill: #000000;
+}
+
+.dark svg path[fill="#e2e8f0"] {
+  fill: #1e293b;
+}
+
+.dark svg polygon[fill="#e2e8f0"] {
+  fill: #1e293b;
+}
+
+.dark svg line[stroke="#000000"] {
+  stroke: #94a3b8;
+}
+
+.dark svg line[stroke="#cbd5e1"],
+.dark svg line[stroke="#e2e8f0"] {
+  stroke: #475569;
+  opacity: 0.5;
+}

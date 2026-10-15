@@ -1,0 +1,90 @@
+======================================================================
+TOPIC 3: PROPAGATION MODES
+======================================================================
+Ground Wave, Sky Wave, Line-of-Sight Propagation & Factors Affecting Propagation
+
+Key Concepts:
+  - Propagation modes: The different ways EM waves travel from a transmitting antenna to a receiving antenna
+  - Ground wave: Travels along the Earth's surface, useful at LF and MF
+  - Sky wave: Refracted back to Earth by the ionosphere, HF band (3–30 MHz)
+  - Line-of-sight: Direct path between antennas, used for VHF, UHF and microwave
+  - Radio horizon extends beyond the optical horizon due to atmospheric refraction
+  - Factors: Frequency, distance, atmosphere, obstacles, ground conductivity, antenna height, power and interference
+
+--- 1. Propagation Modes  (How Radio Waves Travel from Tx to Rx) ---
+Definition: Propagation modes are the different ways electromagnetic waves travel from a transmitting antenna to a receiving antenna.
+Key Points:
+  - Radio waves can travel along the Earth's surface, through the atmosphere, or directly between antennas.
+The Main Propagation Modes:
+  - Ground Wave — Travels along the Earth's surface.
+  - Sky Wave — Refracted back to Earth by the ionosphere.
+  - Line-of-Sight — Travels directly between antennas.
+
+--- 2. Ground-Wave Propagation  (Along the Earth's Surface) ---
+Definition: Ground-wave propagation is the transmission of radio waves along the Earth's surface.
+Working:
+  - Radio waves travel close to and follow the Earth's surface.
+  - The waves can bend around the Earth's curvature to some extent.
+  - Propagation depends on frequency and ground conductivity.
+Facts:
+  - Frequency: Particularly useful at lower frequencies, such as LF and MF.
+  - Applications: AM broadcasting at suitable frequencies, maritime communication and navigation systems.
+Advantages:
+  - Can cover beyond the visual horizon.
+  - Useful for communication over the Earth's surface.
+Disadvantages:
+  - Signal strength decreases with distance.
+  - Ground absorption can weaken the signal.
+  - Less suitable for high-frequency transmission over long distances.
+
+--- 3. Sky-Wave Propagation  (Refracted Back by the Ionosphere) ---
+Definition: Sky-wave propagation is the transmission of radio waves that travel toward the ionosphere and are refracted back toward the Earth.
+Working:
+  1. Upward transmission — The transmitting antenna sends radio waves upward.
+  2. Enters the ionosphere — The waves enter the ionosphere, a region of the upper atmosphere containing charged particles.
+  3. Refraction — Under suitable conditions, the waves are refracted back toward Earth.
+  4. Long distance — The signals can travel long distances, sometimes through multiple hops.
+Facts:
+  - Frequency: Commonly associated with the HF band (3–30 MHz).
+  - Applications: Shortwave broadcasting, amateur radio and long-distance radio communication.
+Advantages:
+  - Enables communication over very long distances.
+  - Can reach beyond the line of sight.
+Disadvantages:
+  - Depends on ionospheric conditions.
+  - Signal strength and quality may vary.
+  - Communication can be affected by solar activity and atmospheric changes.
+
+--- 4. Line-of-Sight (LOS) Propagation  (Direct Path Between Antennas) ---
+Definition: Line-of-sight propagation occurs when radio waves travel along a direct path between the transmitting and receiving antennas.
+Working:
+  - The transmitting antenna sends radio waves toward the receiver.
+  - The receiver must be within a suitable radio path, with sufficient clearance from obstacles.
+  - The Earth's curvature limits the distance between antennas near the ground.
+  - Radio horizon: the maximum distance for a direct radio path. It extends slightly beyond the optical (visual) horizon because the atmosphere bends radio waves, and increases with antenna height.
+Facts:
+  - Frequency: Commonly used for VHF, UHF and microwave communication.
+  - Applications: Television broadcasting, mobile communication, Wi-Fi links, microwave links and satellite communication.
+Advantages:
+  - Supports high data rates with suitable equipment.
+  - Provides relatively predictable propagation when the path is clear.
+  - Suitable for directional communication links.
+Disadvantages:
+  - Buildings, hills and other obstacles can block or weaken signals.
+  - Coverage is limited by the radio horizon.
+  - Often requires suitable antenna placement.
+
+--- 5. Factors Affecting Propagation Modes  (What Changes How Radio Waves Travel) ---
+8 Key Factors:
+  - Frequency — Different frequencies behave differently during propagation.
+  - Distance — Greater distances generally cause greater signal loss.
+  - Atmospheric Conditions — Temperature, humidity and ionospheric conditions can affect radio waves.
+  - Obstacles — Buildings, mountains and trees may block or weaken signals.
+  - Ground Conductivity — Affects ground-wave propagation.
+  - Antenna Height — Influences line-of-sight coverage.
+  - Transmitted Power — Affects the received signal strength.
+  - Interference — Other signals can affect communication quality.
+
+Exam Tips:
+  - Compare ground wave, sky wave and line-of-sight propagation by frequency, working and applications.
+  - Explain why the radio horizon extends beyond the optical horizon.
